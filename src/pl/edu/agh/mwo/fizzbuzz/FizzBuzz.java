@@ -19,7 +19,10 @@ public class FizzBuzz {
         for (int i = 1; i < 100; i++) {
             if (fizz(i) != null) {
                 fizzbuzzList.add(fizz(i));
-            } else {
+            } else if (buzz(i) != null){
+                fizzbuzzList.add(buzz(i));
+            }
+             else {
                 fizzbuzzList.add(Integer.toString(i));
             }
             number++;
@@ -29,6 +32,13 @@ public class FizzBuzz {
     private String fizz(int number) {
         if (number % 3 == 0) {
             return "Fizz";
+        }
+        return null;
+    }
+
+    private String buzz(int number) {
+        if (number % 5 == 0) {
+            return "Buzz";
         }
         return null;
     }

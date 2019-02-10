@@ -35,6 +35,8 @@ public class FizzBuzzTest {
     @Test
     public void testIfBuzzWhenMultipleOfFive() {
         fizzbuzz.fizzBuzz();
-        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(6));
+        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(4));
+        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(19));
+        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(49));
     }
 }
