@@ -16,7 +16,7 @@ public class FizzBuzz {
     }
 
     public void checkForFizzBuzz() {
-        for (int i = 1; i < 100; i++) {
+        for (int i = 1; i < 101; i++) {
             if (fizzbuzz(i) != null) {
                 fizzbuzzList.add(fizzbuzz(i));
             } else if (fizz(i) != null) {
@@ -29,6 +29,7 @@ public class FizzBuzz {
             }
             number++;
         }
+        System.out.println(fizzbuzzList);
     }
 
     private String fizzbuzz(int number) {

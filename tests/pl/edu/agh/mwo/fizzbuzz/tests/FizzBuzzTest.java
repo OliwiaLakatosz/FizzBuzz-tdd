@@ -18,7 +18,7 @@ public class FizzBuzzTest {
     @Test
     public void testIfCountToHundred() {
         fizzbuzz.checkForFizzBuzz();
-        int max = 100;
+        int max = 101;
         int number = fizzbuzz.getNumber();
         Assert.assertEquals(max, number);
     }
