@@ -15,9 +15,11 @@ public class FizzBuzz {
         return fizzbuzzList;
     }
 
-    public void fizzBuzz() {
+    public void checkForFizzBuzz() {
         for (int i = 1; i < 100; i++) {
-            if (fizz(i) != null) {
+            if (fizzbuzz(i) != null) {
+                fizzbuzzList.add(fizzbuzz(i));
+            } else if (fizz(i) != null) {
                 fizzbuzzList.add(fizz(i));
             } else if (buzz(i) != null){
                 fizzbuzzList.add(buzz(i));
@@ -27,6 +29,13 @@ public class FizzBuzz {
             }
             number++;
         }
+    }
+
+    private String fizzbuzz(int number) {
+        if (fizz(number) != null && buzz(number) != null) {
+            return "FizzBuzz";
+        }
+        return null;
     }
 
     private String fizz(int number) {

@@ -17,7 +17,7 @@ public class FizzBuzzTest {
 
     @Test
     public void testIfCountToHundred() {
-        fizzbuzz.fizzBuzz();
+        fizzbuzz.checkForFizzBuzz();
         int max = 100;
         int number = fizzbuzz.getNumber();
         Assert.assertEquals(max, number);
@@ -25,7 +25,7 @@ public class FizzBuzzTest {
 
     @Test
     public void testIfFizzWhenMultipleOfThree() {
-        fizzbuzz.fizzBuzz();
+        fizzbuzz.checkForFizzBuzz();
         Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(2));
         Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(5));
         Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(8));
@@ -34,9 +34,15 @@ public class FizzBuzzTest {
 
     @Test
     public void testIfBuzzWhenMultipleOfFive() {
-        fizzbuzz.fizzBuzz();
+        fizzbuzz.checkForFizzBuzz();
         Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(4));
         Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(19));
         Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(49));
+    }
+
+    @Test
+    public void testIfFizzBuzz() {
+        fizzbuzz.checkForFizzBuzz();
+        Assert.assertEquals("FizzBuzz", fizzbuzz.getFizzbuzzList().get(14));
     }
 }
