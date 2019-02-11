@@ -4,32 +4,15 @@ import java.util.ArrayList;
 
 public class FizzBuzz {
 
-    private int number = 1;
-    private ArrayList<String> fizzbuzzList = new ArrayList<>();
-
-    public int getNumber() {
-        return number;
-    }
-
-    public ArrayList<String> getFizzbuzzList() {
-        return fizzbuzzList;
-    }
-
-    public void checkForFizzBuzz() {
-        for (int i = 1; i < 101; i++) {
-            if (fizzbuzz(i) != null) {
-                fizzbuzzList.add(fizzbuzz(i));
-            } else if (fizz(i) != null) {
-                fizzbuzzList.add(fizz(i));
-            } else if (buzz(i) != null){
-                fizzbuzzList.add(buzz(i));
+    public String returnFizzBuzz(int number) {
+            if (fizzbuzz(number) != null) {
+                return fizzbuzz(number);
+            } else if (fizz(number) != null) {
+                return fizz(number);
+            } else if (buzz(number) != null) {
+                return buzz(number);
             }
-             else {
-                fizzbuzzList.add(Integer.toString(i));
-            }
-            number++;
-        }
-        System.out.println(fizzbuzzList);
+        return Integer.toString(number);
     }
 
     private String fizzbuzz(int number) {

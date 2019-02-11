@@ -16,33 +16,28 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void testIfCountToHundred() {
-        fizzbuzz.checkForFizzBuzz();
-        int max = 101;
-        int number = fizzbuzz.getNumber();
-        Assert.assertEquals(max, number);
+    public void testCheckIfNumberDivisibleByThreeReturnsFizz() {
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(3));
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(9));
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(27));
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(99));
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(18));
+        Assert.assertEquals("Fizz", fizzbuzz.returnFizzBuzz(33));
     }
 
     @Test
-    public void testIfFizzWhenMultipleOfThree() {
-        fizzbuzz.checkForFizzBuzz();
-        Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(2));
-        Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(5));
-        Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(8));
-        Assert.assertEquals("Fizz", fizzbuzz.getFizzbuzzList().get(11));
+    public void testCheckIfNumberDivisibleByFiveReturnsBuzz() {
+        Assert.assertEquals("Buzz", fizzbuzz.returnFizzBuzz(5));
+        Assert.assertEquals("Buzz", fizzbuzz.returnFizzBuzz(95));
+        Assert.assertEquals("Buzz", fizzbuzz.returnFizzBuzz(10));
+        Assert.assertEquals("Buzz", fizzbuzz.returnFizzBuzz(50));
+        Assert.assertEquals("Buzz", fizzbuzz.returnFizzBuzz(25));
     }
 
     @Test
-    public void testIfBuzzWhenMultipleOfFive() {
-        fizzbuzz.checkForFizzBuzz();
-        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(4));
-        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(19));
-        Assert.assertEquals("Buzz", fizzbuzz.getFizzbuzzList().get(49));
-    }
+    public void testCheckIfNumberDivisibleByFiveAndThreeReturnsFizzBuzz() {
+        Assert.assertEquals("FizzBuzz", fizzbuzz.returnFizzBuzz(15));
+        Assert.assertEquals("FizzBuzz", fizzbuzz.returnFizzBuzz(75));
 
-    @Test
-    public void testIfFizzBuzz() {
-        fizzbuzz.checkForFizzBuzz();
-        Assert.assertEquals("FizzBuzz", fizzbuzz.getFizzbuzzList().get(14));
     }
 }
