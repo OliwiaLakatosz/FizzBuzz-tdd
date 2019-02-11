@@ -1,7 +1,5 @@
 package pl.edu.agh.mwo.fizzbuzz;
 
-import java.util.ArrayList;
-
 public class FizzBuzz {
 
     public String returnFizzBuzz(int number) {

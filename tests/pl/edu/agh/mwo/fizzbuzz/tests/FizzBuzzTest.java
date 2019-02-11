@@ -38,6 +38,5 @@ public class FizzBuzzTest {
     public void testCheckIfNumberDivisibleByFiveAndThreeReturnsFizzBuzz() {
         Assert.assertEquals("FizzBuzz", fizzbuzz.returnFizzBuzz(15));
         Assert.assertEquals("FizzBuzz", fizzbuzz.returnFizzBuzz(75));
-
     }
 }
